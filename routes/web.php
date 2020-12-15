@@ -17,6 +17,26 @@ Route::get('/', function () {
     return view('dashboard');
 });
 
+Route::get('/laratables', function () {
+    return view('laratables');
+});
+
+Route::get('/work-allocation', function () {
+    return view('WorkAllocation');
+});
+
+Route::get('/work-allocation-customers', function () {
+    return view('WorkAllocationCustomers');
+});
+
+Route::get('/customer-profile', function () {
+    return view('CustomerProfile');
+});
+
+
+Route::get('/admin/persons', 'App\Http\Controllers\LaratableController@laratableData')->name('admin.persons');
+Route::get('/admin/work/allocation', 'App\Http\Controllers\LaratableController@workAllocation')->name('admin.work.allocation');
+
 Route::get('/calculator', function () {
     return view('calculator');
 });

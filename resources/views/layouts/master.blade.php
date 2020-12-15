@@ -11,8 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="icon" type="image/png" href="/images/favicon_cimb.png" sizes="32x32"/>
-    {{-- <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <script src="{{ asset('js/app.js') }}"></script> --}}
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.0/normalize.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css">
@@ -22,7 +21,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.0/css/flag-icon.min.css">
     <link rel="stylesheet" href="assets/css/cs-skin-elastic.css">
     <link rel="stylesheet" href="assets/css/style.css">
-
+    <link rel="stylesheet" href="assets/css/lib/datatable/dataTables.bootstrap.min.css">
+    
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
 
     <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script> -->
@@ -40,11 +40,11 @@
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-laptop text-danger"></i>Dashboard</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-puzzle-piece"></i><a href="#">Sample item</a></li>
+                            <li><i class="fa fa-puzzle-piece"></i><a href="/customer-profile">Customer Profile</a></li>
                         </ul>
                     </li>
                     <li>
-                      <a href="/calculator"><i class="menu-icon fa fa-users text-success"></i>Users </a>
+                      <a href="/laratables"><i class="menu-icon fa fa-users text-success"></i>Customers </a>
                     </li>
                     <li>
                       <a href="#"><i class="menu-icon fa fa-file-text text-info"></i>Files </a>
@@ -52,8 +52,12 @@
                     <li>
                       <a href="#"><i class="menu-icon fa fa-gears text-primary"></i>Settings </a>
                     </li>
-                    <li>
-                      <a href="#"><i class="menu-icon fa fa-users text-info"></i>Something </a>
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-users text-info"></i>Something</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="fa fa-puzzle-piece"></i><a href="/work-allocation">Work Allocation</a></li>
+                            <li><i class="fa fa-puzzle-piece"></i><a href="/work-allocation-customers">Work Allocation Users</a></li>
+                        </ul>
                     </li>
                     
                 </ul>
@@ -104,42 +108,7 @@
         </header><!-- /header -->
         <!-- Header-->
 
-        <div class="row container"> 
-            <div class="breadcrumbs col-11">
-                <div class="breadcrumbs-inner">
-                    <div class="row m-0">
-                        <div class="col">
-                            <div class="page-header float-left">
-                                <div class="page-title">
-                                    <h1>@yield('title')</h1>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="page-header float-right">
-                                <div class="page-title">
-                                    <ol class="breadcrumb text-right">
-                                        {{-- @yield('breadcrumb') --}}
-                                    </ol>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="dropdown mt-4 col-1 bg-white">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                   <span>Stream...</span>
-                </a>
-
-                <div class="user-menu dropdown-menu">
-                    <a class="nav-link" href="#">All</a>
-                    <a class="nav-link" href="#">Gsave</a>
-                    <a class="nav-link" href="#">Jumio</a>
-                </div>
-            </div>
-        </div>
+        @yield('content-top')
 
         <div class="content">
             @yield('content')
@@ -167,11 +136,15 @@
 <!-- Right Panel -->
 
 <!-- Scripts -->
-<script src="https://cdn.jsdelivr.net/npm/jquery@2.2.4/dist/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.4/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery-match-height@0.7.2/dist/jquery.matchHeight.min.js"></script>
 <script src="assets/js/main.js"></script>
+{{-- <script src="{{ asset('js/app.js') }}"></script> --}}
+
+<script src="assets/js/lib/data-table/datatables.min.js"></script>
+<script src="assets/js/lib/data-table/dataTables.bootstrap.min.js"></script>
 
 @yield('scripts')
 
