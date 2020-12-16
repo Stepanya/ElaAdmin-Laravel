@@ -6,31 +6,7 @@
 
 @section('content-top')
 <div class="container">
-    <div class="row mb-4"> 
-        <div class="breadcrumbs col">
-            <div class="breadcrumbs-inner">
-                <div class="row m-0">
-                    <div class="col">
-                        <div class="page-header float-left">
-                            <div class="page-title">
-                                <h1>Work Allocation</h1>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="page-header float-right">
-                            <div class="page-title">
-                                <ol class="breadcrumb text-right">
-                                    
-                                </ol>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row text-center mr-2">
+    <div class="row text-center mr-2 pt-2">
         <div class="col">
             <div class="dropdown">
                 <button class="btn bg-white dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -85,7 +61,7 @@
 $('#customers-table').DataTable({
     serverSide: true,
     searching: false,
-    paging: false,
+    paging: true,
     scrollY: "300px",
     scrollCollapse: true,
     ajax: "{{ route('admin.persons') }}",

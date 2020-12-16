@@ -37,14 +37,17 @@
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     {{-- <li class="menu-title">Widgets</li> --}}
-                    <li class="menu-item-has-children dropdown">
+                    {{-- <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-laptop text-danger"></i>Dashboard</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-puzzle-piece"></i><a href="/customer-profile">Customer Profile</a></li>
+                            <li><i class="fa fa-puzzle-piece"></i><a href="/">Dashboard</a></li>
                         </ul>
+                    </li> --}}
+                    <li>
+                      <a href="/"><i class="menu-icon fa fa-laptop text-danger"></i>Dashboard </a>
                     </li>
                     <li>
-                      <a href="/laratables"><i class="menu-icon fa fa-users text-success"></i>Customers </a>
+                      <a href="/customers"><i class="menu-icon fa fa-users text-success"></i>Customers </a>
                     </li>
                     <li>
                       <a href="#"><i class="menu-icon fa fa-file-text text-info"></i>Files </a>
@@ -52,13 +55,13 @@
                     <li>
                       <a href="#"><i class="menu-icon fa fa-gears text-primary"></i>Settings </a>
                     </li>
-                    <li class="menu-item-has-children dropdown">
+                    {{-- <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-users text-info"></i>Something</a>
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="fa fa-puzzle-piece"></i><a href="/work-allocation">Work Allocation</a></li>
                             <li><i class="fa fa-puzzle-piece"></i><a href="/work-allocation-customers">Work Allocation Users</a></li>
                         </ul>
-                    </li>
+                    </li> --}}
                     
                 </ul>
             </div><!-- /.navbar-collapse -->
@@ -83,8 +86,8 @@
             <div class="top-right">
                 <div class="header-menu">
                     <div class="header-left m-3 mr-5 row">
-                        <a href="#" class="col">Work Allocation</a>
-                        <a href="#" class="col">My QA Basket</a>
+                        <a href="/work-allocation" class="col">Work Allocation</a>
+                        <a href="/work-allocation-customers" class="col">My QA Basket</a>
                     </div>
 
                     <div class="user-area dropdown float-right">

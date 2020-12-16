@@ -14,30 +14,27 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('dashboard');
+    return view('dashboard.index');
 });
 
-Route::get('/laratables', function () {
-    return view('laratables');
+Route::get('/customers', function () {
+    return view('customer.customers');
 });
 
 Route::get('/work-allocation', function () {
-    return view('WorkAllocation');
+    return view('agent.work_allocation');
 });
 
 Route::get('/work-allocation-customers', function () {
-    return view('WorkAllocationCustomers');
+    return view('agent.work_allocation_customers');
 });
 
 Route::get('/customer-profile', function () {
-    return view('CustomerProfile');
+    return view('customer.customer_profile');
 });
 
 
 Route::get('/admin/persons', 'App\Http\Controllers\LaratableController@laratableData')->name('admin.persons');
 Route::get('/admin/work/allocation', 'App\Http\Controllers\LaratableController@workAllocation')->name('admin.work.allocation');
 
-Route::get('/calculator', function () {
-    return view('calculator');
-});
 
