@@ -65,29 +65,34 @@
         <strong class="card-title">Pass for GS03</strong>
     </div>
     <div class="card-body">
-        <table id="customers-table" class="table table-sm table-bordered table-striped">
-            <thead class="thead-dark">
-                <tr>
-                    <th>Cust No.</th>
-                    <th>Last Name</th>
-                    <th>First Name</th>
-                    <th>Date of Birth</th>
-                    <th>Opened Date</th>
-                    <th>Nationality</th>
-                    <th>Document No.</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-        </table>
+        <div class="table-responsive overflow-auto">
+            <table id="customers-table" class="table table-sm table-bordered table-striped">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Cust No.</th>
+                        <th>Last Name</th>
+                        <th>First Name</th>
+                        <th>Date of Birth</th>
+                        <th>Opened Date</th>
+                        <th>Nationality</th>
+                        <th>Document No.</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
     </div>
 </div>
+
 @endsection
 
 @section('scripts')
 <script>
 
-$('#customers-table').DataTable({
+jQuery('#customers-table').DataTable({
     serverSide: true,
+    responsive: true,
+    scrollY: 500,
     ajax: "{{ route('admin.persons') }}",
     columns: [
         { name: 'customer_number' },

@@ -39,30 +39,31 @@
 @endsection
 
 @section('content')
-
-<table id="customers-table" class="table table-sm table-bordered table-light">
-    <thead class="thead-dark">
-        <tr>
-            <th>Cust No.</th>
-            <th>Last Name</th>
-            <th>First Name</th>
-            <th>Date of Birth</th>
-            <th>Opened Date</th>
-            <th>Nationality</th>
-            <th>Document No.</th>
-        </tr>
-    </thead>
-</table>
+<div class="table-responsive">
+    <table id="customers-table" class="table table-sm table-bordered table-light">
+        <thead class="thead-dark"> 
+            <tr>
+                <th>Cust No.</th>
+                <th>Last Name</th>
+                <th>First Name</th>
+                <th>Date of Birth</th>
+                <th>Opened Date</th>
+                <th>Nationality</th>
+                <th>Document No.</th>
+            </tr>
+        </thead>
+    </table>
+</div>
 @endsection
 
 @section('scripts')
 <script>
 
-$('#customers-table').DataTable({
+jQuery('#customers-table').DataTable({
     serverSide: true,
+    responsive: true,
     searching: false,
-    paging: true,
-    scrollY: "300px",
+    scrollY: 500,
     scrollCollapse: true,
     ajax: "{{ route('admin.persons') }}",
     columns: [
