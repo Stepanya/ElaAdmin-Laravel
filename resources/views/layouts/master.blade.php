@@ -88,7 +88,7 @@
                 <div class="header-menu">
                     <div class="header-left m-3 mr-5 row">
                         <a href="/work-allocation" class="col">Work Allocation</a>
-                        <a href="/work-allocation-customers" class="col">My QA Basket</a>
+                        <a href="/qa-basket" class="col">My QA Basket</a>
                     </div>
 
                     <div class="user-area dropdown float-right">

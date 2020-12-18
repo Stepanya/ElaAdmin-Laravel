@@ -76,7 +76,7 @@
             </div>
         </div>
     </div>
-    <a href="#" class="float-right text-primary">Allocate work to QA</a>
+    <a href="/allocate-work-to-qa" class="float-right text-primary">Allocate work to QA</a>
 </div>
 @endsection
 
