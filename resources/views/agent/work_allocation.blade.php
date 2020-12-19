@@ -82,17 +82,17 @@
 
 @section('content')
 <div class="table-responsive">
-<table id="customers-table" class="table table-sm table-bordered table-light" border="1px solid black">
-    <thead class="thead-dark">
-        <tr class="text-center">
-            <th>QA Name</th>
-            <th>Allocation</th>
-            <th>Completed</th>
-            <th>Pending (Withing SLA)</th>
-            <th>Pending (SLA Breach)</th>
-        </tr>
-    </thead>
-</table>
+    <table id="customers-table" class="table table-sm table-bordered table-light" border="1px solid black">
+        <thead class="thead-dark">
+            <tr class="text-center">
+                <th>QA Name</th>
+                <th>Allocation</th>
+                <th>Completed</th>
+                <th>Pending (Withing SLA)</th>
+                <th>Pending (SLA Breach)</th>
+            </tr>
+        </thead>
+    </table>
 </div>
 @endsection
 
