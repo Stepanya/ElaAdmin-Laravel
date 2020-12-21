@@ -21,14 +21,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.0/css/flag-icon.min.css">
     <link rel="stylesheet" href="assets/css/cs-skin-elastic.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/lib/datatable/dataTables.bootstrap.min.css">
+    {{-- <link rel="stylesheet" href="assets/css/lib/datatable/dataTables.bootstrap.min.css"> --}}
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.22/r-2.2.6/datatables.min.css"/>
     
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
 
     <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script> -->
 
 </head>
-<body>
+<body style="table-layout: fixed;">
     <!-- Left Panel -->
 
     <aside id="left-panel" class="left-panel">
@@ -87,7 +88,7 @@
                 <div class="header-menu">
                     <div class="header-left m-3 mr-5 row">
                         <a href="/work-allocation" class="col">Work Allocation</a>
-                        <a href="/work-allocation-customers" class="col">My QA Basket</a>
+                        <a href="/qa-basket" class="col">My QA Basket</a>
                     </div>
 
                     <div class="user-area dropdown float-right">
@@ -146,8 +147,10 @@
 <script src="assets/js/main.js"></script>
 {{-- <script src="{{ asset('js/app.js') }}"></script> --}}
 
-<script src="assets/js/lib/data-table/datatables.min.js"></script>
+{{-- <script src="assets/js/lib/data-table/datatables.min.js"></script> --}}
+<script src="https://cdn.datatables.net/v/bs4/dt-1.10.22/r-2.2.6/datatables.min.js"></script>
 <script src="assets/js/lib/data-table/dataTables.bootstrap.min.js"></script>
+
 
 @yield('scripts')
 

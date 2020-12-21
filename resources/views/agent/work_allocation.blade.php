@@ -76,31 +76,35 @@
             </div>
         </div>
     </div>
-    <a href="#" class="float-right text-primary">Allocate work to QA</a>
+    <a href="/allocate-work-to-qa" class="float-right text-primary">Allocate work to QA</a>
 </div>
 @endsection
 
 @section('content')
-
-<table id="customers-table" class="table table-sm table-bordered table-light" border="1px solid black">
-    <thead class="thead-dark">
-        <tr class="text-center">
-            <th>QA Name</th>
-            <th>Allocation</th>
-            <th>Completed</th>
-            <th>Pending (Withing SLA)</th>
-            <th>Pending (SLA Breach)</th>
-        </tr>
-    </thead>
-</table>
+<div class="table-responsive">
+    <table id="customers-table" class="table table-sm table-bordered table-light" border="1px solid black">
+        <thead class="thead-dark">
+            <tr class="text-center">
+                <th>QA Name</th>
+                <th>Allocation</th>
+                <th>Completed</th>
+                <th>Pending (Withing SLA)</th>
+                <th>Pending (SLA Breach)</th>
+            </tr>
+        </thead>
+    </table>
+</div>
 @endsection
 
 @section('scripts')
 <script>
 
-var table = $('#customers-table').DataTable({
+var table = jQuery('#customers-table').DataTable({
     serverSide: true,
+    responsive: true,
     searching: false,
+    scrollY: 500,
+    scrollCollapse: true,
     ajax: "{{ route('admin.work.allocation') }}",
     columns: [
         { name: 'name' },
@@ -109,14 +113,15 @@ var table = $('#customers-table').DataTable({
         { name: 'pending_SLA'},
         { name: 'pending_SLA_breach'},
     ],
-    initComplete: function() {
-        $( table.column( 1 ).nodes() ).addClass( 'text-center' );
-        $( table.column( 2 ).nodes() ).addClass( 'bg-success text-center text-light' );
-        $( table.column( 3 ).nodes() ).addClass( 'bg-warning text-center' );
-        $( table.column( 4 ).nodes() ).addClass( 'bg-danger text-center text-light' );
-    }
+    fnDrawCallback: function() { addColor() }
 });
 
+function addColor() {
+    jQuery( table.column( 1 ).nodes() ).addClass( 'text-center' );
+    jQuery( table.column( 2 ).nodes() ).addClass( 'bg-success text-center text-light' );
+    jQuery( table.column( 3 ).nodes() ).addClass( 'bg-warning text-center' );
+    jQuery( table.column( 4 ).nodes() ).addClass( 'bg-danger text-center text-light' );
+}
 
 </script>
 @endsection
