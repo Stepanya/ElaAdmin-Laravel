@@ -19,6 +19,10 @@ class Persons extends Model
         'doc_no'
     ]; 
 
+    public static function laratablesCustomSelect($user) {
+        return view('layouts.select', compact('user'))->render();
+    }
+
     public static function laratablesCustomAction($user) {
         return view('layouts.action', compact('user'))->render();
     }

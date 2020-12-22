@@ -243,6 +243,12 @@
                 <label>Final Status</label>
                 <select class="form-control">
                     <option>Selected Items</option>
+                    <option>Retained GS01</option>
+                    <option>Self Upgrade GS02</option>
+                    <option>Pass - upgrade to GS03</option>
+                    <option>Pass - upgrade to GS04</option>
+                    <option>Fail - Criteria</option>
+                    <option>Fail Fraud</option>
                 </select>
             </div>
             <div class="form-group col-8">
@@ -271,6 +277,8 @@
         <label>Recommended Action</label>
         <select class="form-control">
             <option>For Closure</option>
+            <option>For Upgrade</option>
+            <option>For Blocking</option>
         </select>
     </div>
 </div>

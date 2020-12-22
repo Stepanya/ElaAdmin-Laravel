@@ -25,8 +25,12 @@ Route::get('/work-allocation', function () {
     return view('agent.work_allocation');
 });
 
-Route::get('/work-allocation-customers', function () {
-    return view('agent.work_allocation_customers');
+Route::get('/allocate-work-to-qa', function () {
+    return view('agent.allocate_work_to_qa');
+});
+
+Route::get('/qa-basket', function () {
+    return view('agent.qa_basket');
 });
 
 Route::get('/customer-profile', function () {
