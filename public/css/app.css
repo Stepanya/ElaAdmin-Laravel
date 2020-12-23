@@ -1,4 +1,12 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Nunito);
+@charset "UTF-8";
+
+/* Import resources */
+@import "../assets/css/lib/normalize.css@8.0.0/normalize.min.css";
+@import "../assets/css/lib/fontawesome/fontawesome.min.css";
+@import "../assets/css/lib/themify-icons/themify-icons.css";
+@import "../assets/css/lib/pe-icon-7-stroke/pe-icon-7-stroke.css";
+@import "../assets/css/cs-skin-elastic.css";
 
 /*!
  * Bootstrap v4.5.0 (https://getbootstrap.com/)

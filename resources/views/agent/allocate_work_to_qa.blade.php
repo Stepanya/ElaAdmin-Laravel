@@ -1,7 +1,12 @@
 @extends('layouts.master')
 
+@section('stylesheets')
+<link rel="stylesheet" href="assets/DataTables/datatables.min.css"/>
+<link rel="stylesheet" href="assets/DataTables/Select-1.3.1/css/select.dataTables.min.css"/>
+@endsection
+
 @section('title')
-    CIMB Validation - Dashboard
+CIMB Validation - Dashboard
 @endsection
 
 @section('content-top')
@@ -64,6 +69,11 @@
 @endsection
 
 @section('scripts')
+
+<script src="assets/DataTables/datatables.min.js"></script>
+<script src="assets/DataTables/Select-1.3.1/js/dataTables.select.min.js"></script>
+<script src="assets/DataTables/DataTables-1.10.23/js/dataTables.bootstrap4.min.js"></script>
+
 <script>
 
 jQuery('#customers-table').DataTable({
@@ -87,7 +97,7 @@ jQuery('#customers-table').DataTable({
 });
 
 jQuery('#select-all input:checkbox').click(function () {    
-     jQuery('input:checkbox').prop('checked', this.checked);    
- });
+    jQuery('input:checkbox').prop('checked', this.checked);    
+});
 </script>
 @endsection
