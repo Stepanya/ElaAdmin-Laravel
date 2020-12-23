@@ -13,9 +13,8 @@
                     Selected Items
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
+                    <a class="dropdown-item" href="#">All Selected</a>
+                    <a class="dropdown-item" href="#">All Items</a>
                 </div>
             </div>
         </div>
@@ -25,9 +24,16 @@
                     A/C opened 'to'
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
+                    <a class="dropdown-item" href="#">Epie B. Brillones</a>
+                    <a class="dropdown-item" href="#">Narissa Hernandez</a>
+                    <a class="dropdown-item" href="#">Marivic Falsis</a>
+                    <a class="dropdown-item" href="#">Elysa Tan</a>
+                    <a class="dropdown-item" href="#">Glofer Love Pepito</a>
+                    <a class="dropdown-item" href="#">Maryleene Tan</a>
+                    <a class="dropdown-item" href="#">Cristina Madridano</a>
+                    <a class="dropdown-item" href="#">Denmark Isidro</a>
+                    <a class="dropdown-item" href="#">Niza Levera</a>
+                    <a class="dropdown-item" href="#">Myla Eleine</a>
                 </div>
             </div>
         </div>
@@ -50,6 +56,7 @@
                 <th>Opened Date</th>
                 <th>Nationality</th>
                 <th>Document No.</th>
+                <th id="select-all">Select All <br> <input type="checkbox" class="text-center"></th>
             </tr>
         </thead>
     </table>
@@ -74,8 +81,13 @@ jQuery('#customers-table').DataTable({
         { name: 'opened_date'},
         { name: 'nationality'},
         { name: 'doc_no'},
+        { name: 'select', orderable: false, className: "text-center" },
+
     ]
 });
 
+jQuery('#select-all input:checkbox').click(function () {    
+     jQuery('input:checkbox').prop('checked', this.checked);    
+ });
 </script>
 @endsection
