@@ -1,7 +1,11 @@
 @extends('layouts.master')
 
+@section('stylesheets')
+<link rel="stylesheet" href="assets/DataTables/datatables.min.css"/>
+@endsection
+
 @section('title')
-    CIMB Validation - Dashboard
+CIMB Validation - Dashboard
 @endsection
 
 @section('content-top')
@@ -87,6 +91,10 @@
 @endsection
 
 @section('scripts')
+
+<script src="assets/DataTables/datatables.min.js"></script>
+<script src="assets/DataTables/DataTables-1.10.23/js/dataTables.bootstrap4.min.js"></script>
+
 <script>
 
 jQuery('#customers-table').DataTable({

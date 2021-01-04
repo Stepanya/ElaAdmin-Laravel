@@ -9,17 +9,9 @@
 
     <link rel="icon" type="image/png" href="/images/favicon_cimb.png" sizes="32x32"/>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-
-    <link rel="stylesheet" href="assets/css/lib/normalize.css@8.0.0/normalize.min.css">
-    <link rel="stylesheet" href="assets/css/lib/fontawesome/fontawesome.min.css">
-    <link rel="stylesheet" href="assets/css/lib/themify-icons/themify-icons.css">
-    <link rel="stylesheet" href="assets/css/lib/pe-icon-7-stroke/pe-icon-7-stroke.css">
-    <link rel="stylesheet" href="assets/css/cs-skin-elastic.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/DataTables/datatables.min.css"/>
-    <link rel="stylesheet" href="assets/DataTables/Select-1.3.1/css/select.dataTables.min.css"/>
+    <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
     
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+    @yield('stylesheets')
 
 </head>
 <body style="table-layout: fixed;">
@@ -130,18 +122,11 @@
 
 </div><!-- /#right-panel -->
 
-<!-- Right Panel -->
-
 <!-- Scripts -->
 <script src="assets/js/jquery/jquery.min.js"></script>
 <script src="assets/js/popper/popper.min.js"></script>
 <script src="assets/js/jquery-match-height/jquery.matchHeight-min.js"></script>
-<script src="assets/js/main.js"></script>
-{{-- <script src="{{ asset('js/app.js') }}"></script> --}}
-
-<script src="assets/DataTables/datatables.min.js"></script>
-<script src="assets/DataTables/Select-1.3.1/js/dataTables.select.min.js"></script>
-<script src="assets/DataTables/DataTables-1.10.23/js/dataTables.bootstrap4.min.js"></script>
+<script src="{{ asset('assets/js/main.js') }} "></script>
 
 @yield('scripts')
 
