@@ -125,6 +125,7 @@
 <!-- Scripts -->
 <script src="assets/js/jquery/jquery.min.js"></script>
 <script src="assets/js/popper/popper.min.js"></script>
+<script src="assets/js/popper/popper.min.js"></script>
 <script src="assets/js/jquery-match-height/jquery.matchHeight-min.js"></script>
 <script src="{{ asset('assets/js/main.js') }} "></script>
 

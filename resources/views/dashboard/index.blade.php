@@ -6,7 +6,7 @@
 
 @section('content-top')
 <div class="row"> 
-    <div class="col-10">
+    <div class="col">
         <div class="breadcrumbs">
             <div class="breadcrumbs-inner">
                 <div class="row m-0">
@@ -19,26 +19,15 @@
                     </div>
                     <div class="col">
                         <div class="page-header float-right">
-                            <div class="page-title">
-                                <ol class="breadcrumb text-right">
-                                    
-                                </ol>
-                            </div>
+                            <select class="form-control mt-2">
+                                <option>Stream...</option>
+                                <option>All</option>
+                                <option>Jumio</option>
+                                <option>Gsave</option>
+                            </select>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-1 mt-4">
-        <div class="dropdown">
-            <button class="btn bg-white dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Stream...
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
             </div>
         </div>
     </div>
@@ -194,7 +183,7 @@
           </div>
       </div>
   </div>
-
+  {{-- Third row --}}
   <div class="col-lg-3 col-md-6">
       <div class="card">
           <div class="card-body">
@@ -266,13 +255,13 @@
           </div>
       </div>
   </div>
-  
+  {{-- Fourth row --}}
   <div class="col-lg-3 col-md-6">
       <div class="card">
           <div class="card-body">
               <div class="stat-widget-five">
                   <div class="stat-icon dib flat-color-5">
-                      {{-- <i class="pe-7s-id"></i> --}}
+                      <i class="pe-7s-id"></i>
                   </div>
                   <div class="stat-content">
                       <div class="text-left dib">
@@ -284,6 +273,24 @@
           </div>
       </div>
   </div>
+
+  <div class="col-lg-3 col-md-6">
+    <div class="card">
+        <div class="card-body">
+            <div class="stat-widget-five">
+                <div class="stat-icon dib flat-color-3">
+                    <i class="pe-7s-id"></i>
+                </div>
+                <div class="stat-content">
+                    <div class="text-left dib">
+                        <div class="stat-text"><small>320,190 (13.00%)</small></div>
+                        <div class="stat-heading">Pass GS01</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </div>
 @endsection
 

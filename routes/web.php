@@ -37,7 +37,7 @@ Route::get('/customer-profile', function () {
     return view('customer.customer_profile');
 });
 
-
+Route::get('/admin/logs', 'App\Http\Controllers\LaratableController@auditHistory')->name('admin.logs');
 Route::get('/admin/persons', 'App\Http\Controllers\LaratableController@laratableData')->name('admin.persons');
 Route::get('/admin/work/allocation', 'App\Http\Controllers\LaratableController@workAllocation')->name('admin.work.allocation');
 

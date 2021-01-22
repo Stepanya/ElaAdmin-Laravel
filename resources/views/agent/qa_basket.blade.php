@@ -84,7 +84,7 @@ CIMB Validation - Dashboard
 @endsection
 
 @section('content')
-<div class="table-responsive">
+<div class="table-responsive overflow-auto">
 <table id="customers-table" class="table table-sm table-bordered table-light">
     <thead class="thead-dark">
         <tr>

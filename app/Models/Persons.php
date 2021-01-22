@@ -23,6 +23,10 @@ class Persons extends Model
         return view('layouts.select', compact('user'))->render();
     }
 
+    public static function laratablesCustomFields($user) {
+        return view('layouts.fields', compact('user'))->render();
+    }
+
     public static function laratablesCustomAction($user) {
         return view('layouts.action', compact('user'))->render();
     }

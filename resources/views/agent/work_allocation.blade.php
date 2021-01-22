@@ -92,7 +92,7 @@ CIMB Validation - Dashboard
                 <th>QA Name</th>
                 <th>Allocation</th>
                 <th>Completed</th>
-                <th>Pending (Withing SLA)</th>
+                <th>Pending (Within SLA)</th>
                 <th>Pending (SLA Breach)</th>
             </tr>
         </thead>
