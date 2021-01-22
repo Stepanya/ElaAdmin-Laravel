@@ -129,6 +129,7 @@
 <script src="assets/js/jquery-match-height/jquery.matchHeight-min.js"></script>
 <script src="{{ asset('assets/js/main.js') }} "></script>
 
+
 @yield('scripts')
 
 </body>

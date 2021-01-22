@@ -79,40 +79,17 @@
             responsive: true,
             scrollY: 500,
             ajax: "{{ route('admin.persons') }}",
-            columns: [{
-                    name: 'customer_number'
-                },
-                {
-                    name: 'id_type'
-                },
-                {
-                    name: 'last_name'
-                },
-                {
-                    name: 'first_name'
-                },
-                {
-                    name: 'dob'
-                },
-                {
-                    name: 'opened_date'
-                },
-                {
-                    name: 'fields',
-                    orderable: false,
-                    searchable: false
-                },
-                {
-                    name: 'product_id'
-                },
-                {
-                    name: 'doc_no'
-                },
-                {
-                    name: 'action',
-                    orderable: false,
-                    searchable: false
-                }
+            columns: [
+                { name: 'customer_number' },
+                { name: 'id_type' },
+                { name: 'last_name' },
+                { name: 'first_name' },
+                { name: 'dob' },
+                { name: 'opened_date' },
+                { name: 'fields', orderable: false, searchable: false },
+                { name: 'product_id' }, 
+                { name: 'doc_no' },
+                { name: 'action', orderable: false, searchable: false }
             ],
             fnDrawCallback: function() {
                 table.rows().every(function(index, element) {
